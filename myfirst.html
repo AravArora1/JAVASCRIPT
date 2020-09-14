@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>
+HELLO ARAV
+</title>
+</head>
+<body>
+<h1>
+ ARAV
+</h1>
+<button onclick="patern()">pattern1</button>
+<img src="lightOff.png" alt ="light off" id='my image'>
+<img src="on2.png" alt ="light on" id='your image'>
+<button onclick="document.getElementById('my image').src='lightOn.png'">switch on</button>
+<button onclick="document.getElementById('my image').src='lightOff.png'">switch off</button>
+<!--this is my first comment -->
+</body>
+</html>
+<script>
+    var greeting="Hello User"
+    var count=0
+    function lightblink(){
+        console.log("This is test"+greeting)
+
+    }
+    function patern(){
+        setInterval(function interval(){
+            count=count+1//same as count=+1          
+           
+            console.log("count value"+count)
+            if (count %2==0){
+                document.getElementById('my image').src='lightOn.png'
+                document.getElementById('your image').src='off2.png'
+            }
+            else{
+                document.getElementById('my image').src='lightOff.png'
+                document.getElementById('your image').src='on2.png'
+            }
+        },1000)
+    }
+    
+
+    
+</script>

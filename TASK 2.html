@@ -1,0 +1,84 @@
+
+<!-- saved from url=(0044)http://127.0.0.1:5500/sir%20task23bulbs.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        TASK 2
+    </title>
+</head>
+<body>
+    <h1>PRESS THE BUTTON AND WAIT FOR SOME TIME, THE IMAGES WILL CHANGE</h1>
+<img src="./TASK 2_files/lightOff.png" alt="LIGHT OFF" id="first bulb">
+<img src="./TASK 2_files/lightOff.png" alt="LIGHT OFF" id="second bulb">
+<img src="./TASK 2_files/lightOff.png" alt="LIGHT OFF" id="third bulb">
+<button onclick="onandoff()">CLICK HERE</button>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<script>
+var a=0
+function onandoff(){
+    console.log("I USED 3 IF,THEN,ELSE STATEMENTS ")
+    setInterval(function interval(){
+        a=a+1
+    
+        console.log(a+"seconds")
+    
+    if(a%2==0){
+        document.getElementById("first bulb").src=" lightOn.png"
+        
+    }
+    else{
+        document.getElementById("first bulb").src="lightOff.png"
+    }
+    if(a%10==0){
+        document.getElementById("third bulb").src="lightOn.png"
+    }
+    else{
+        document.getElementById("third bulb").src="lightOff.png"
+    }
+    if(a%4==0){
+        document.getElementById("second bulb").src="lightOn.png"}
+    else{
+        document.getElementById("second bulb").src="lightOff.png"
+    
+    }
+    
+    },1000)
+}
+</script></body></html>

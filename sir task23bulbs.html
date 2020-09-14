@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>
+        TASK 2
+    </title>
+</head>
+<body>
+    <h1>PRESS THE BUTTON AND WAIT FOR SOME TIME, THE IMAGES WILL CHANGE</h1>
+<img src="lightOff.png" alt="LIGHT OFF" id="first bulb">
+<img src="lightOff.png" alt="LIGHT OFF" id="second bulb">
+<img src="lightOff.png" alt="LIGHT OFF" id="third bulb">
+<button  onclick="onandoff()">CLICK HERE</button>
+</body>
+</html>
+<script>
+var a=0
+function onandoff(){
+    console.log("I USED 3 IF,THEN,ELSE STATEMENTS ")
+    setInterval(function interval(){
+        a=a+1
+    
+        console.log(a+"seconds")
+    
+    if(a%2==0){
+        document.getElementById("first bulb").src=" lightOn.png"
+        
+    }
+    else{
+        document.getElementById("first bulb").src="lightOff.png"
+    }
+    if(a%10==0){
+        document.getElementById("third bulb").src="lightOn.png"
+    }
+    else{
+        document.getElementById("third bulb").src="lightOff.png"
+    }
+    if(a%4==0){
+        document.getElementById("second bulb").src="lightOn.png"}
+    else{
+        document.getElementById("second bulb").src="lightOff.png"
+    
+    }
+    
+    },1000)
+}
+</script>

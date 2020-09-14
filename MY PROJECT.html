@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>
+BULB 1 CLICK
+</title>
+</head>
+<body >
+<img src="lightOff.png" alt="LIGHT OFF" Id="white bulb" height=300 width=200>
+<img src="on2.png" alt="LIGHT ON" Id="black bulb" height=200 width=200>
+<button onclick="loop()">CLICK HERE</button>
+</body>
+</html>
+<script>
+var a=0
+function loop(){
+		a=a+1
+		if(a%2==0){
+			document.getElementById("white bulb").src="lightOff.png"
+			document.getElementById("black bulb").src="on2.png"}
+		else {
+			document.getElementById("white bulb").src="lightOn.png"
+			document.getElementById("black bulb").src="off2.png"}
+	}
+
+</script>
+
